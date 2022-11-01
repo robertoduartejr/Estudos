@@ -1,0 +1,37 @@
+.container{
+    background-color: #fff;
+    width: 400px;
+    min-height: 400px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+}
+
+.title{
+    color: #000
+}
+
+.form-group{
+    margin-top: 20px;
+}
+
+.todo-input{
+border: 1px solid #EAE8E8;
+outline: none;
+padding: 8px;
+border-radius: 6px;
+width: 90%;
+margin-right: 5px;
+height: 32px;
+}
+
+.btn-add{
+    width: calc(10% - 5px);
+    height: 32px;
+    background-color: #8e4ae7;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
