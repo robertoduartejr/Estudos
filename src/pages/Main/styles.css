@@ -39,3 +39,24 @@ height: 32px;
     font-size: 30px;
     font-weight: bold;
 }
+
+
+.todo-list{
+    margin-top: 20px;
+}
+
+.list-item{
+list-style: none;
+background-color: #F3F1F4;
+padding: 10px;
+margin: 10px 0px;
+}
+
+.todoFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}

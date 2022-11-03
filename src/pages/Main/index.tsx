@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../../components/Button/index.tsx';
 import './styles.css';
 
 const Main = () => {
@@ -8,6 +9,10 @@ const Main = () => {
         setTodoList([
             ...todoList,inputValue
         ])
+        setInputValue("")
+    }
+    const handleClear = () => {
+        setTodoList([])
     }
     
 
@@ -27,9 +32,13 @@ const Main = () => {
             <div className='todo-list'>
                 <ul>
                 {
-               todoList.map((todo) => <li>{todo}</li>)
+               todoList.map((todo) => <li className='list-item'>{todo}</li>)
                }
                 </ul>
+            </div>
+            <div className='todoFooter'>
+                você tem {todoList.length} tarefas pendentes
+                <Button onClick={handleClear}>Limpar Tudo</Button>
             </div>
         </div>
     )
