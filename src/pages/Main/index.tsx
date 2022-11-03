@@ -14,6 +14,10 @@ const Main = () => {
     const handleClear = () => {
         setTodoList([])
     }
+    const handleDeleteItem = (index) => {
+        const newTodoList = todoList.filter((_, i) => i !== index);
+        setTodoList(newTodoList)
+    }
     
 
     return (
@@ -30,16 +34,16 @@ const Main = () => {
             <button onClick={handleAddClick} className='btn-add'>+</button>
             </div>
             <div className='todo-list'>
-                <ul>
+                <ul className='testeul'>
                 {
-               todoList.map((todo) => <li className='list-item'>{todo}</li>)
+               todoList.map((todo,index) => <li className='list-item'>{todo}<button onClick={() => handleDeleteItem(index)} className='btn-del'>✔</button> </li>)
                }
                 </ul>
             </div>
-            <div className='todoFooter'>
-                você tem {todoList.length} tarefas pendentes
-                <Button onClick={handleClear}>Limpar Tudo</Button>
-            </div>
+            <span className='todoFooter'>
+                Você possui {todoList.length} tarefas pendentes
+                <Button onClick={handleClear}>Limpar Todas</Button>
+            </span>
         </div>
     )
 }
