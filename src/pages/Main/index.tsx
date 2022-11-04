@@ -6,10 +6,12 @@ const Main = () => {
     const [inputValue,setInputValue] = useState("");
     const [todoList, setTodoList] = useState<string[]>([]);
     const handleAddClick = () => {
+        if(inputValue!==""){
         setTodoList([
             ...todoList,inputValue
         ])
         setInputValue("")
+        }
     }
     const handleClear = () => {
         setTodoList([])
